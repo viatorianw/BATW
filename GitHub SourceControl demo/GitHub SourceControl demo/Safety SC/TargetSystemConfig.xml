@@ -1,19 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TargetSystemConfig Crc="4203264970" Version="1.4">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TargetSystemConfig Crc="3940442326" Version="1.4">
   <TargetSystemType>HSafetyPLC</TargetSystemType>
-  <TargetSystemSubType></TargetSystemSubType>
-  <IsExternalDevice>False</IsExternalDevice>
-  <TargetSystemObjectId/>
-  <TargetSystemObjectName/>
-  <SoftwareVersion/>
-  <SerialNumber/>
-  <ProjectCRC/>
-  <MapProjectCRC>False</MapProjectCRC>
-  <MapSerialNumber>False</MapSerialNumber>
+  <TargetSystemSubType>EL6910</TargetSystemSubType>
+  <IsExternalDevice>false</IsExternalDevice>
+  <TargetSystemObjectId>50462733</TargetSystemObjectId>
+  <TargetSystemObjectName>Term 13 (EL6910)</TargetSystemObjectName>
+  <SoftwareVersion>02 (V01.03)</SoftwareVersion>
+  <SerialNumber>1629124</SerialNumber>
+  <ProjectCRC>1435</ProjectCRC>
+  <MapProjectCRC>false</MapProjectCRC>
+  <MapSerialNumber>false</MapSerialNumber>
   <VersionNumber>1</VersionNumber>
-  <FSOEAddress>1</FSOEAddress>
-  <DipSwitch/>
-  <AmsNetID/>
-  <AmsPort/>
-  <ConnectionInfoDataConfigOld>False</ConnectionInfoDataConfigOld>
+  <FSOEAddress>202</FSOEAddress>
+  <DipSwitch>202</DipSwitch>
+  <AmsNetID>5.60.138.106.2.1</AmsNetID>
+  <AmsPort>1012</AmsPort>
+  <ConnectionInfoDataConfigOld>false</ConnectionInfoDataConfigOld>
+  <TakeOverSafetyAliasDeviceNamesInProcessImage>false</TakeOverSafetyAliasDeviceNamesInProcessImage>
+  <TakeOverStandardAliasDeviceNamesInProcessImage>false</TakeOverStandardAliasDeviceNamesInProcessImage>
+  <BackupRestore Needed="0" Activated="false" RestoreUserAdministration="false" />
 </TargetSystemConfig>
