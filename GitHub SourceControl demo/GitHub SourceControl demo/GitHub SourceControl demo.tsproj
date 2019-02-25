@@ -3,10 +3,18 @@
 	<Project ProjectGUID="{6B78B19C-8B1C-42C4-BA96-3F553D85F1D4}" TargetNetId="5.60.138.106.1.1" ShowHideConfigurations="#x306">
 		<System>
 			<Settings MaxCpus="4" NonWinCpus="2"/>
+			<Tasks>
+				<Task Id="5" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
 		</System>
 		<Motion>
 			<NC File="NC.xti"/>
 		</Motion>
+		<Plc>
+			<Project File="PLC_SourceControl_Demo.xti"/>
+		</Plc>
 		<Safety>
 			<Project File="Safety SC.xti"/>
 		</Safety>

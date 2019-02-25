@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.27" ClassName="CNestedPlcProjDef">
+	<Project GUID="{F341127F-3706-4BC4-A5C4-6A912D6CA9CB}" Name="PLC_SourceControl_Demo" PrjFilePath="..\..\PLC_SourceControl_Demo\PLC_SourceControl_Demo.plcproj" TmcFilePath="..\..\PLC_SourceControl_Demo\PLC_SourceControl_Demo.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
+			<Name>PLC_SourceControl_Demo Instance</Name>
+			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+		</Instance>
+	</Project>
+</TcSmItem>
