@@ -7,6 +7,9 @@
 		<Motion>
 			<NC File="NC.xti"/>
 		</Motion>
+		<Safety>
+			<Project File="Safety SC.xti"/>
+		</Safety>
 		<Io>
 			<Device File="Device 1 (EtherCAT).xti" Id="1"/>
 		</Io>
