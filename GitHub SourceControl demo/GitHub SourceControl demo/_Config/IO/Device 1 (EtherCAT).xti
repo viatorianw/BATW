@@ -1423,7 +1423,7 @@ Bit1: Value smaller than Limit2]]>
 					<SyncMan>001000012600010001000000000100010001001026010000</SyncMan>
 					<SyncMan>001100012200010002000000000100010001001122010000</SyncMan>
 					<SyncMan>00120f002400010003000000000000000200001224010000</SyncMan>
-					<SyncMan>001d0e002000010004000000000000000200001d20010000</SyncMan>
+					<SyncMan>001d0f002000010004000000000000000200001d20010000</SyncMan>
 					<SyncMan>002e00002400000003000000000000000000002e24000000</SyncMan>
 					<SyncMan>002f00002000000004000000000000000000002f20000000</SyncMan>
 					<Fmmu>0000000000000000001200020100000001000000060000000200000000000000</Fmmu>
@@ -1447,6 +1447,14 @@ Bit1: Value smaller than Limit2]]>
 						</Entry>
 						<Entry Name="Message_4 RxPDO" Index="#x6000" Sub="#x02">
 							<Type GUID="{2438F91B-E188-4ED7-8594-54354F9ED6A4}" Namespace="Safety">FSOE_6</Type>
+						</Entry>
+					</Pdo>
+					<Pdo Name="StandardInputs" Index="#x1bf0" Flags="#x2011" SyncMan="3">
+						<Entry Name="Standard Out Var 5" Index="#x7000" Sub="#x01">
+							<Type>BIT</Type>
+						</Entry>
+						<Entry>
+							<Type GUID="{18071995-0000-0000-0000-002000000007}">ARRAY [0..6] OF BIT</Type>
 						</Entry>
 					</Pdo>
 					<Pdo Name="StandardOutputs" Index="#x17f0" InOut="1" Flags="#x2011" SyncMan="2">

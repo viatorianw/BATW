@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<safetyApplication Crc="3611871268" xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.1.0.0" Id="d359a103-28d8-4892-8f5e-ef84e32e4dd7" name="" mapState="false" mapDiag="false" groupOrderId="0" passificationAllowed="false" temporaryDeactivationAllowed="false" permamentDeactivationAllowed="false" xmlid="0" analogFBOutputReplacementValues="Zero" verifyAnalogFBInputsIfStart="false" xmlns="http://schemas.microsoft.com/dsltools/SafetyApplicationLanguage">
+<safetyApplication Crc="900968464" xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.1.0.0" Id="d359a103-28d8-4892-8f5e-ef84e32e4dd7" name="" mapState="false" mapDiag="false" groupOrderId="0" passificationAllowed="false" temporaryDeactivationAllowed="false" permamentDeactivationAllowed="false" xmlid="0" analogFBOutputReplacementValues="Zero" verifyAnalogFBInputsIfStart="false" xmlns="http://schemas.microsoft.com/dsltools/SafetyApplicationLanguage">
   <networks>
     <safetyApplicationHasNetworks Id="ecfc31d3-6145-4a94-aed5-698c24b25693">
       <Network Id="cd44fc1f-2b08-43d8-953d-e2aa42d5d308" name="Network1" networkName="Network1" intId="1" networkOrderId="0">
@@ -75,8 +75,82 @@
               </outPorts>
             </fBAnd>
           </networkHasFunctionBlocks>
+          <networkHasFunctionBlocks Id="b4cda111-d726-41e9-b3d0-0a5f52f63bde">
+            <fBOr Id="9cceb4f3-5c19-403a-b7c3-a38cbb14ae76" name="FBOr1" instanceName="FBOr1" orderOfExecution="2" mapState="false" mapDiag="false" xmlid="0" functionName="safeOr">
+              <inPorts>
+                <functioBlockHasInPorts Id="c0039c40-d802-478b-ba7a-b6e099830378">
+                  <inPort Id="a91dee39-4031-424e-b0e0-03e1035d326d" name="OrIn1" portName="OrIn1" assignedVariable="S3" portNum="2" objectIndex="8" varId="2" filter="2" portDataType="1" channelInterface="Activated" deactivate1="Break Contact (NC)" maxDeviation="0" resetTime="0">
+                    <portMappings>
+                      <functionBlockPortHasPortMappings Id="65418642-08ae-4257-a532-7a40843dfd59">
+                        <portMapping Id="d5d336f8-5f42-4aae-a1ba-219d7f499899" name="FBOr1_OrIn1_mapping" direction="input" dataType="safeBool" assignedVariable="S3" physicalPorts="Term 17 (EL1904) - Module 1 (FSOES).InputChannel3">
+                          <aliasPorts>
+                            <portMappingHasAliasPorts Id="aac88464-6bd8-4cc5-8ddb-4b5acab17a00">
+                              <aliasPort Id="2c4552d1-e45c-470e-97f2-133d58ecb575" name="SdsId3.ChannelId3" sdsId="3" channelId="3" channelName="InputChannel3" functionId="1610679041" />
+                            </portMappingHasAliasPorts>
+                          </aliasPorts>
+                        </portMapping>
+                      </functionBlockPortHasPortMappings>
+                    </portMappings>
+                  </inPort>
+                </functioBlockHasInPorts>
+                <functioBlockHasInPorts Id="8ccd6f1d-9b55-496a-abdc-7a0e17635f2e">
+                  <inPort Id="01bd2195-de36-4091-a9d8-b9276af16b3f" name="OrIn2" portName="OrIn2" assignedVariable="S4" portNum="3" objectIndex="9" varId="3" filter="2" portDataType="1" channelInterface="Activated" deactivate1="Break Contact (NC)" maxDeviation="0" resetTime="0">
+                    <portMappings>
+                      <functionBlockPortHasPortMappings Id="f3f5378e-3c96-4805-a542-74b8bea7ac77">
+                        <portMapping Id="57961ec1-db73-4a12-976e-463ef8a61157" name="FBOr1_OrIn2_mapping" direction="input" dataType="safeBool" assignedVariable="S4" physicalPorts="Term 17 (EL1904) - Module 1 (FSOES).InputChannel4">
+                          <aliasPorts>
+                            <portMappingHasAliasPorts Id="28c24750-6499-4241-8702-9cf869766d5d">
+                              <aliasPort Id="63386473-1919-4505-b457-adf2d9e6a8d2" name="SdsId3.ChannelId4" sdsId="3" channelId="4" channelName="InputChannel4" functionId="1610679297" />
+                            </portMappingHasAliasPorts>
+                          </aliasPorts>
+                        </portMapping>
+                      </functionBlockPortHasPortMappings>
+                    </portMappings>
+                  </inPort>
+                </functioBlockHasInPorts>
+                <functioBlockHasInPorts Id="78d35783-cc1f-4c15-a474-77ee0c4d3b61">
+                  <inPort Id="05c6f308-5c4d-41c0-a135-fef61bfb8840" name="OrIn3" portName="OrIn3" portNum="4" objectIndex="10" varId="4" filter="2" portDataType="1" channelInterface="Deactivated" maxDeviation="0" resetTime="0" />
+                </functioBlockHasInPorts>
+                <functioBlockHasInPorts Id="38072bce-d8dc-4a9a-9299-67b2e2fb0ebd">
+                  <inPort Id="ea93155d-f023-462f-a8f9-9741860e9835" name="OrIn4" portName="OrIn4" portNum="5" objectIndex="11" varId="5" filter="2" portDataType="1" channelInterface="Deactivated" maxDeviation="0" resetTime="0" />
+                </functioBlockHasInPorts>
+                <functioBlockHasInPorts Id="1191535d-a538-4145-bc93-6ba09d67fb68">
+                  <inPort Id="22b58902-b37a-4e00-81ca-147b6692bf87" name="OrIn5" portName="OrIn5" portNum="6" objectIndex="12" varId="6" filter="2" portDataType="1" channelInterface="Deactivated" maxDeviation="0" resetTime="0" />
+                </functioBlockHasInPorts>
+                <functioBlockHasInPorts Id="45bf144a-61b4-461c-9ada-95b37f9f798a">
+                  <inPort Id="19c9cb87-48db-477b-a897-00cd7748a0ee" name="OrIn6" portName="OrIn6" portNum="7" objectIndex="13" varId="7" filter="2" portDataType="1" channelInterface="Deactivated" maxDeviation="0" resetTime="0" />
+                </functioBlockHasInPorts>
+                <functioBlockHasInPorts Id="b0e13437-9942-469b-81be-1f45d34ee5b9">
+                  <inPort Id="3d0f73ed-e458-4892-a424-ff673bde18bc" name="OrIn7" portName="OrIn7" portNum="8" objectIndex="14" varId="8" filter="2" portDataType="1" channelInterface="Deactivated" maxDeviation="0" resetTime="0" />
+                </functioBlockHasInPorts>
+                <functioBlockHasInPorts Id="84a1d727-f4a8-4c11-b224-78f528848cc0">
+                  <inPort Id="cc99f090-8195-43d4-985c-3d9a096a5b88" name="OrIn8" portName="OrIn8" portNum="9" objectIndex="15" varId="9" filter="2" portDataType="1" channelInterface="Deactivated" maxDeviation="0" resetTime="0" />
+                </functioBlockHasInPorts>
+              </inPorts>
+              <outPorts>
+                <functionBlockHasOutPorts Id="7c83a6cd-1f1f-435a-aaae-76cc8628658c">
+                  <outPort Id="a08299e6-abc1-4047-acd9-9cc9c3ac8256" name="OrOut" portName="OrOut" assignedVariable="DQ1" portNum="8" objectIndex="1" varId="20" filter="7" portDataType="1" replacementValue="0">
+                    <portMappings>
+                      <functionBlockPortHasPortMappings Id="98dc54b4-a462-4335-8327-6f7ae0e055ac">
+                        <portMapping Id="16d34682-98a6-418c-a712-c176d321845c" name="FBOr1_OrOut_mapping" direction="output" dataType="safeBool" assignedVariable="DQ1" physicalPorts="1 Digital Output (Standard)_1.Out">
+                          <aliasPorts>
+                            <portMappingHasAliasPorts Id="ba8ae259-fad3-4510-9e9a-e4cd211db018">
+                              <aliasPort Id="6dca06aa-56be-418c-81e8-96a04a73c8bc" name="SdsId5.ChannelId1" sdsId="5" channelId="1" channelName="Out" functionId="1131179972" />
+                            </portMappingHasAliasPorts>
+                          </aliasPorts>
+                        </portMapping>
+                      </functionBlockPortHasPortMappings>
+                    </portMappings>
+                  </outPort>
+                </functionBlockHasOutPorts>
+              </outPorts>
+            </fBOr>
+          </networkHasFunctionBlocks>
         </functionBlocks>
       </Network>
+    </safetyApplicationHasNetworks>
+    <safetyApplicationHasNetworks Id="e78ebc7d-3eef-4226-be78-d4df5a9dfcac">
+      <Network Id="b34a2596-64ad-4718-b774-85946266b8bc" name="Network2" networkName="Network2" intId="2" networkOrderId="1" />
     </safetyApplicationHasNetworks>
   </networks>
   <twinSAFEGroupAliasPorts>
