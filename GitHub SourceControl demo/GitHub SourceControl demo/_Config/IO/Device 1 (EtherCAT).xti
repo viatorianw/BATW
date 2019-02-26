@@ -193,9 +193,6 @@
 		<Image Id="1" AddrType="9" ImageType="3">
 			<Name>Image</Name>
 		</Image>
-		<Image Id="4" AddrType="10" ImageType="3">
-			<Name>Image-2</Name>
-		</Image>
 		<Box BoxType="9099" Id="1">
 			<Name>Term 1 (EK1200)</Name>
 			<ImageId>1000</ImageId>
@@ -1422,8 +1419,8 @@ Bit1: Value smaller than Limit2]]>
 				<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x1afe3052" RevisionNo="#x00110000" InfoDataAddr="true" RepeatSupport="true" TimeoutMailbox2="10000" TComSupport="true" CheckRevisionNoType="3" PortPhys="51" SafetyLogicSupported="true" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL6910, TwinSAFE PLC" Desc="EL6910" PortABoxInfo="#x0100000c">
 					<SyncMan>001000012600010001000000000100010001001026010000</SyncMan>
 					<SyncMan>001100012200010002000000000100010001001122010000</SyncMan>
-					<SyncMan>00120f002400010003000000000000000200001224010000</SyncMan>
-					<SyncMan>001d0f002000010004000000000000000200001d20010000</SyncMan>
+					<SyncMan>001215002400010003000000000000000200001224010000</SyncMan>
+					<SyncMan>001d15002000010004000000000000000200001d20010000</SyncMan>
 					<SyncMan>002e00002400000003000000000000000000002e24000000</SyncMan>
 					<SyncMan>002f00002000000004000000000000000000002f20000000</SyncMan>
 					<Fmmu>0000000000000000001200020100000001000000060000000200000000000000</Fmmu>
@@ -1440,12 +1437,18 @@ Bit1: Value smaller than Limit2]]>
 						<Entry Name="Message_4 TxPDO" Index="#x7000" Sub="#x02">
 							<Type GUID="{2438F91B-E188-4ED7-8594-54354F9ED6A4}" Namespace="Safety">FSOE_6</Type>
 						</Entry>
+						<Entry Name="Message_7 TxPDO" Index="#x7000" Sub="#x03">
+							<Type GUID="{2438F91B-E188-4ED7-8594-54354F9ED6A4}" Namespace="Safety">FSOE_6</Type>
+						</Entry>
 					</Pdo>
 					<Pdo Name="ConnectionOutputs" Index="#x1600" InOut="1" Flags="#x2011" SyncMan="2">
 						<Entry Name="Message_3 RxPDO" Index="#x6000" Sub="#x01">
 							<Type GUID="{2438F91B-E188-4ED7-8594-54354F9ED6A4}" Namespace="Safety">FSOE_6</Type>
 						</Entry>
 						<Entry Name="Message_4 RxPDO" Index="#x6000" Sub="#x02">
+							<Type GUID="{2438F91B-E188-4ED7-8594-54354F9ED6A4}" Namespace="Safety">FSOE_6</Type>
+						</Entry>
+						<Entry Name="Message_7 RxPDO" Index="#x6000" Sub="#x03">
 							<Type GUID="{2438F91B-E188-4ED7-8594-54354F9ED6A4}" Namespace="Safety">FSOE_6</Type>
 						</Entry>
 					</Pdo>
@@ -7245,6 +7248,8 @@ Bit 3: Tristate 2]]>
 				<Link VarA="Term 1 (EK1200)^Term 14 (EK1122)^Term 15 (EK1100)^Term 17 (EL1904)^Module 1 (FSOES)^TxPDO^FSOE" VarB="ConnectionOutputs^Message_3 RxPDO"/>
 				<Link VarA="Term 1 (EK1200)^Term 14 (EK1122)^Term 15 (EK1100)^Term 18 (EL2904)^Module 1 (FSOES)^RxPDO^FSOE" VarB="ConnectionInputs^Message_4 TxPDO"/>
 				<Link VarA="Term 1 (EK1200)^Term 14 (EK1122)^Term 15 (EK1100)^Term 18 (EL2904)^Module 1 (FSOES)^TxPDO^FSOE" VarB="ConnectionOutputs^Message_4 RxPDO"/>
+				<Link VarA="Term 1 (EK1200)^Term 14 (EK1122)^Term 23 (EK1101)^Term 24 (EL1904)^Module 1 (FSOES)^RxPDO^FSOE" VarB="ConnectionInputs^Message_7 TxPDO"/>
+				<Link VarA="Term 1 (EK1200)^Term 14 (EK1122)^Term 23 (EK1101)^Term 24 (EL1904)^Module 1 (FSOES)^TxPDO^FSOE" VarB="ConnectionOutputs^Message_7 RxPDO"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 14 (EK1122)^Term 15 (EK1100)^Term 17 (EL1904)">
 				<Link VarA="Term 1 (EK1200)^Term 13 (EL6910)^ConnectionInputs^Message_3 TxPDO" VarB="Module 1 (FSOES)^RxPDO^FSOE"/>
@@ -7253,6 +7258,10 @@ Bit 3: Tristate 2]]>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 14 (EK1122)^Term 15 (EK1100)^Term 18 (EL2904)">
 				<Link VarA="Term 1 (EK1200)^Term 13 (EL6910)^ConnectionInputs^Message_4 TxPDO" VarB="Module 1 (FSOES)^RxPDO^FSOE"/>
 				<Link VarA="Term 1 (EK1200)^Term 13 (EL6910)^ConnectionOutputs^Message_4 RxPDO" VarB="Module 1 (FSOES)^TxPDO^FSOE"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 14 (EK1122)^Term 23 (EK1101)^Term 24 (EL1904)">
+				<Link VarA="Term 1 (EK1200)^Term 13 (EL6910)^ConnectionInputs^Message_7 TxPDO" VarB="Module 1 (FSOES)^RxPDO^FSOE"/>
+				<Link VarA="Term 1 (EK1200)^Term 13 (EL6910)^ConnectionOutputs^Message_7 RxPDO" VarB="Module 1 (FSOES)^TxPDO^FSOE"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>
